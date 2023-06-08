@@ -17,7 +17,7 @@ con un nombre cada quien.")
 
 (defn sumar-elementos
   "La primera coll solo me interesa sus primeros dos elementos a sumar, los demas no se tomaran en cuenta.
-  La segunda coll, le agrego los dos elementos de la primera coll y posteriormente sumo cada elemento de la
+  A la segunda coll, le agrego los dos elementos de la primera coll y posteriormente sumo cada elemento de la
   nueva coll."
   [[elem1 elem2] coll]
   (apply + (conj coll elem1 elem2)))
@@ -30,3 +30,11 @@ con un nombre cada quien.")
 (let [{:keys [a b]} {:a 100 :b 200}]
   (hash-map :a (inc a) :b (dec b)))
 
+;Destructuración como parametros en una función
+
+(defn sumita [{:keys [a b]}]
+  (if (and (number? a) (number? b))
+    (+ 100 a b)
+    "Parametros incorrectos"))
+
+(sumita {:a 5 :b 10})

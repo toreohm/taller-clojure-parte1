@@ -34,7 +34,8 @@
 (= 1 2)
 ; => false
 
-;Clojure uses the Boolean operators "or" and "and". "or" returns either the first truthy value or the last value.
+;Clojure uses the Boolean operators "or" and "and".
+; "or" returns either the first truthy value or the last value.
 ; "and" returns the first falsey value or, if no values are falsey, the last truthy value.
 
 (or false nil :ciudad) ; :ciudad

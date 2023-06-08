@@ -75,6 +75,7 @@
           (= valor-maquina "piedra") {:jugador "tijera" :maquina "piedra" :resultado "Maquina gana"}
           (= valor-maquina "papel") {:jugador "tijera" :maquina "papel" :resultado "Jugador gana"}
           (= valor-maquina "tijera") {:jugador "tijera" :maquina "tijera" :resultado "Empate"})))))
+
 (defn jugar []
   (println "Escribe tu jugada [piedra, papel, tijera]:")
   (let [valor-jugador (clojure.string/lower-case (read-line))

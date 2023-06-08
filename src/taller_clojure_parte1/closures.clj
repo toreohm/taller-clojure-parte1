@@ -23,6 +23,10 @@
       {:a 1 :b 2}
       @a))
 
+;ejemplo con reset!
+(let [x (atom 5)]
+  (reset! x "Suiza"))
+
 (comment "By now you’ve seen that functions can return other functions.
 The returned functions are closures, which means that they can access all the variables
 that were in scope when the function was created.")
