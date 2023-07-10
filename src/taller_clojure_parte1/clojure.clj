@@ -14,4 +14,3 @@
 ;Aquí es en donde yo aprendí Clojure https://www.braveclojure.com/clojure-for-the-brave-and-true/
 
 ;Otra herramienta necesaria:  https://clojuredocs.org/
-

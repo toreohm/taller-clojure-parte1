@@ -44,7 +44,7 @@
   "A lavar las vasijas")
 
 (if false
-  "Si es falso se ejecuta el then, o sea éste string"
+  "Si es true se ejecuta el then, o sea éste string"
   "De lo contrario se ejecuta el else (opcional)")
 
 ;Podemos omitir el "optional-else-form", y en caso de que la expresión booleana se evalue
@@ -68,6 +68,8 @@
       true)
   (do (println "No lo es")
       false))
+;IF-ELSE EN CLOJURE
+(if "proceso" (if (< 5 3) "Aprobado" (if false "true" "Esto se va a ver")) :db-error)
 
 ;El operador "when" es como una combinación de if y do, pero sin el else.
 ;En caso de que la expresión booleana se evalue a false, "when" devuelve nil

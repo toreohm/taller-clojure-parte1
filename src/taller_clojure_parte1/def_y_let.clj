@@ -8,12 +8,12 @@
 
 ; Se está usando el término "vincular un nombre", mientras que en otros lenguajes de programación
 ; diría que estoy asignando un valor a una variable.
-; En clojure no se "acostumbra" a usar el término variable.
+; En clojure no se acostumbra a usar el término variable.
 ; Tomemos en cuenta que no hay operador de asignación en clojure y las estructuras de datos son inmutables.
 ; Esto es parte del paradigma funcional.
 
 ;A pesar de que no hay operador de asignación, se puede hacer "asignación de variables"
-; en clojure "gracias" a let.
+; en clojure gracias a let.
 ;En otros términos, estamos asignando valores a nombres y éstos tendran un scope local a let.
 ; Es decir, una vez fuera de let, ya están fuera de scope.
 

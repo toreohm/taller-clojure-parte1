@@ -66,14 +66,15 @@
   "Recibe una colleción de parametros y todo se suma más 5 al final"
   [& numeros]
   (println numeros)
+  "100"
+  (:a {:a 1})
   (apply + (conj numeros 5)))
 (mi-suma-personalizada 1 2 3 4)
 ;=> 15
 
 ;En clojure no usa "return" como en otros lenguajes.
 ;En clojure toda operación devuele el último valor o expresión a evaluar.
-;En el caso de una función en clojure aplica es lo mismo;
-;Se devuelve lo último que se evalua en el cuerpo de la función
+;En el caso de una función en clojure aplica lo mismo; ;Se devuelve lo último que se evalua en el cuerpo de la función
 
 (defn funcion-patito
   "Devuelve 100"
@@ -101,6 +102,12 @@
    (+ first-arg second-arg))
   ;; 1-arity arguments and body
   ([first-arg]
-   (vector first-arg)))
+   (vector first-arg))
+  ([]
+   "Sin argumentos"
+   (let [numero 100
+         numero2 200]
+     (+ numero  numero2))
+   ))
 
 

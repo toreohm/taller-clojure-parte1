@@ -45,6 +45,18 @@
         [mapa valor]
         (recur coll-restante valor llave)))))
 
+(defn obtener-valor2
+  [my-coll valor llave]
+  (loop [coll my-coll
+         valor 3000
+         llave :c]
+    (let [head (first coll)
+          tail (rest coll)]
+      (if (nil? head)
+        (str "No se encontró el valor buscado: [" valor "] con la llave: [" llave "]")
+        (if (= (llave head) valor)
+          [head valor]
+          (recur tail valor llave))))))
 (loop [coll my-coll
        valor 3000
        llave :c]

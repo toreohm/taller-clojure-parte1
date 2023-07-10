@@ -1,10 +1,10 @@
 (ns taller-clojure-parte1.destructuracion)
 
 (comment
-  "La idea básica detrás de la desestructuración es que le permite vincular de manera concisa
+  "La idea básica detrás de la destructuración es que le permite vincular de manera concisa
   (breve, claro y preciso) nombres a valores dentro de una colección.")
 (comment "Supongamos que tenemos un vector, y queremos vincular los tres primeros elementos
-con un nombre cada quien.")
+con un nombre a cada elemento.")
 
 (let [[uno dos tres & los-demas] [1 2 3 4 5 6]]
   (println uno)
@@ -32,6 +32,7 @@ con un nombre cada quien.")
 
 ;Destructuración como parametros en una función
 
+;keys es una palabra reservada, es decir, tiene que ser :keys al momento de desestructurar un mapa.
 (defn sumita [{:keys [a b]}]
   (if (and (number? a) (number? b))
     (+ 100 a b)

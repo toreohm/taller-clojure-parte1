@@ -32,9 +32,17 @@
 ;=> "banana"
 (conj '(1 2 3) 4) ; => (4 1 2 3)
 
+(comment "Obtener el segundo elemento de la lista anidada: " '(1 2 3 4 '(1 2 3)))
+;-------------------------------------------------------------------------
+(nth (nth (get-in (vec '(1 2 3 4 '(1 2 3))) [4]) 1) 1)
+(second (nth (get (vec '(1 2 3 4 '(1 2 3))) 4) 1))
+;--------------------------------------------------------------------------
 ;Checar en REPL
 (list 1 "two" {3 4})
 (count (list 1 "two" {3 4}))
+;Transformar un vector a una lista
+(reverse (into (list) [1 2 3 4 5]))
+(reverse (into (list) (vector 1 2 3 4 5)))
 
 ;When should you use a list and when should you use a vector?
 ; A good rule of thumb is that if you need to easily add items to the beginning of a sequence or
